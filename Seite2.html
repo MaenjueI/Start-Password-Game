@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <div class="container">
+
+    <label for="Benutzername"><b>Benutzername</b></label>
+    <input type="Benutzername" id="Benutzername" name="Benutzername" required>
+    <label for="Password"><b>Password</b></label>
+    <input type="password" id="Password" name="Password" required>
+    <button onclick="checkCode()">Einloggen</button>
+    <p id="message" style="color: red;"></p>
+ </div>
+
+
+<script>
+    function checkCode() {
+        const richtigerBenutzername = "TestBenutzer";
+        const richtigesPassword = "Test";
+
+        const Benutzernameinput = document.getElementById("Benutzername").value;
+        const Passwordinput = document.getElementById("Password").value;
+
+        if (Benutzernameinput === richtigerBenutzername && Passwordinput === richtigesPassword) {
+            window.location.href = "https://www.example.com/";
+        } else {
+            document.getElementById("message").innerText = "Benutzername oder Password ist Falsch!";
+        }
+    }
+//Checkt ob Password und Benutzername stimmen, gibt Fehlermeldung wenn nicht
+</script>
+
+<style>
+div{text-align: center;}
+div{margin-top: 200px;}
+
+
+</style>
+
+<style>
+body {
+            background-image: url("https://i.imgur.com/ZZtVeNu.png");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+    .container {
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    .password-container {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .password-container button {
+        margin-left: 10px;
+    }
+
+    button {
+        display: block;
+        margin: 10px auto;
+    }
+</style>
+
+<button onclick="window.location.href='file:///C:/Users/manue/OneDrive/Dokumente/Webseite/Desktop.html';"> Zurück
+</button>
+
+
+</html>
